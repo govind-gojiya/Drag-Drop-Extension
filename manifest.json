@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Drag and Drop File Upload",
   "version": "1.0",
   "description": "Adds a drag and drop zone for file uploads.",
@@ -7,7 +7,7 @@
     "48": "icon48.png",
     "96": "icon96.png"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
   "browser_action": {
     "default_icon": {
       "48": "icon48.png"
@@ -21,6 +21,7 @@
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": "background.js",
+    "permisssion": false
   }
 }
