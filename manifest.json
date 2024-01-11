@@ -21,7 +21,7 @@
     }
   ],
   "background": {
-    "scripts": "background.js",
-    "permisssion": false
+    "scripts": ["background.js"],
+    "persistent": false
   }
 }
