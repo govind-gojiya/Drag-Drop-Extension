@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   dropArea.addEventListener('drop', function (e) {
     e.preventDefault();
     dropArea.classList.remove('active');
-    
+
     var files = e.dataTransfer.files;
     if (files.length > 0) {
       document.dispatchEvent(new CustomEvent('filesDropped', { detail: files }));
@@ -22,6 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   closeButton.addEventListener('click', function () {
-    window.close();
+    browser.runtime.sendMessage({ action: 'toggleExtensionState' });
   });
 });
